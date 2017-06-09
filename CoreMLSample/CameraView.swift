@@ -8,6 +8,7 @@
 
 import UIKit
 import AVFoundation
+import Vision
 
 final class CameraView: UIView {
 
@@ -114,14 +115,17 @@ final class CameraView: UIView {
 extension CameraView: AVCaptureVideoDataOutputSampleBufferDelegate {
     func captureOutput(_ output: AVCaptureOutput, didOutput sampleBuffer: CMSampleBuffer, from connection: AVCaptureConnection) {
         let imageBuffer = CMSampleBufferGetImageBuffer(sampleBuffer)!
-        guard let pixelBuffer = imageBuffer.toImage().resize(to: CGSize(width: 224, height: 224)).pixelBuffer() else {
-            fatalError()
+        let model = try! VNCoreMLModel(for: Resnet50().model)
+        let request = VNCoreMLRequest(model: model) { [weak self] request, error in
+            guard let results = request.results as? [VNClassificationObservation] else {
+                fatalError()
+            }
+            let prediction = results[0]
+            self?.delegate?.cameraViewDidPredictScene(label: prediction.identifier, confidence: Double(prediction.confidence))
         }
-        guard let prediction = try? model.prediction(image: pixelBuffer) else {
-            return
-        }
-        let label = prediction.classLabel
-        delegate?.cameraViewDidPredictScene(label: label, confidence: prediction.classLabelProbs[label])
+        request.imageCropAndScaleOption = VNImageCropAndScaleOptionCenterCrop
+        let handler = VNImageRequestHandler(cvPixelBuffer: imageBuffer, options: [:])
+        try? handler.perform([request])
     }
 }
 
