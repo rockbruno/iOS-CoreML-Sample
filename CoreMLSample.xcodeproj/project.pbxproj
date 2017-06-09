@@ -26,6 +26,7 @@
 		FD267F9C1EEA122A009AEB2C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FD267FA21EEA1236009AEB2C /* GoogLeNetPlaces.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; name = GoogLeNetPlaces.mlmodel; path = ../../../../Downloads/GoogLeNetPlaces.mlmodel; sourceTree = "<group>"; };
 		FD267FA41EEA2FE4009AEB2C /* UIImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImage.swift; sourceTree = "<group>"; };
+		FD267FA61EEA30C4009AEB2C /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,6 +43,7 @@
 		FD267F841EEA122A009AEB2C = {
 			isa = PBXGroup;
 			children = (
+				FD267FA61EEA30C4009AEB2C /* README.md */,
 				FD267F8F1EEA122A009AEB2C /* CoreMLSample */,
 				FD267F8E1EEA122A009AEB2C /* Products */,
 			);
