@@ -13,9 +13,7 @@ import Vision
 final class CameraView: UIView {
 
     weak var delegate: CameraViewDelegate?
-
-    let model = Resnet50()
-    let captureSession: AVCaptureSession
+    private let captureSession: AVCaptureSession
 
     private let nameLabel: UILabel = {
         let label = UILabel()
@@ -115,7 +113,7 @@ final class CameraView: UIView {
 extension CameraView: AVCaptureVideoDataOutputSampleBufferDelegate {
     func captureOutput(_ output: AVCaptureOutput, didOutput sampleBuffer: CMSampleBuffer, from connection: AVCaptureConnection) {
         let imageBuffer = CMSampleBufferGetImageBuffer(sampleBuffer)!
-        let model = try! VNCoreMLModel(for: Resnet50().model)
+        let model = try! VNCoreMLModel(for: Inceptionv3().model)
         let request = VNCoreMLRequest(model: model) { [weak self] request, error in
             guard let results = request.results as? [VNClassificationObservation] else {
                 fatalError()

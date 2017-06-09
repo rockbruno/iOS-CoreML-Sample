@@ -13,7 +13,7 @@
 		FD267F9B1EEA122A009AEB2C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FD267F991EEA122A009AEB2C /* LaunchScreen.storyboard */; };
 		FDC6FF6B1EEAD2DB00ECA47F /* CameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC6FF6A1EEAD2DB00ECA47F /* CameraView.swift */; };
 		FDC6FF6D1EEAD3C200ECA47F /* SmartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC6FF6C1EEAD3C200ECA47F /* SmartViewController.swift */; };
-		FDC6FF741EEAE29200ECA47F /* Resnet50.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = FDC6FF731EEAE29200ECA47F /* Resnet50.mlmodel */; };
+		FDC6FF761EEAFFA300ECA47F /* Inceptionv3.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = FDC6FF751EEAFFA300ECA47F /* Inceptionv3.mlmodel */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,7 +26,7 @@
 		FD267FA61EEA30C4009AEB2C /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
 		FDC6FF6A1EEAD2DB00ECA47F /* CameraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraView.swift; sourceTree = "<group>"; };
 		FDC6FF6C1EEAD3C200ECA47F /* SmartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmartViewController.swift; sourceTree = "<group>"; };
-		FDC6FF731EEAE29200ECA47F /* Resnet50.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; name = Resnet50.mlmodel; path = ../../../../Downloads/Resnet50.mlmodel; sourceTree = "<group>"; };
+		FDC6FF751EEAFFA300ECA47F /* Inceptionv3.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; name = Inceptionv3.mlmodel; path = ../../../../Downloads/Inceptionv3.mlmodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,7 +60,7 @@
 		FD267F8F1EEA122A009AEB2C /* CoreMLSample */ = {
 			isa = PBXGroup;
 			children = (
-				FDC6FF731EEAE29200ECA47F /* Resnet50.mlmodel */,
+				FDC6FF751EEAFFA300ECA47F /* Inceptionv3.mlmodel */,
 				FD267F901EEA122A009AEB2C /* AppDelegate.swift */,
 				FD267F921EEA122A009AEB2C /* CameraViewController.swift */,
 				FDC6FF6A1EEAD2DB00ECA47F /* CameraView.swift */,
@@ -150,7 +150,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FDC6FF741EEAE29200ECA47F /* Resnet50.mlmodel in Sources */,
+				FDC6FF761EEAFFA300ECA47F /* Inceptionv3.mlmodel in Sources */,
 				FD267F931EEA122A009AEB2C /* CameraViewController.swift in Sources */,
 				FD267F911EEA122A009AEB2C /* AppDelegate.swift in Sources */,
 				FDC6FF6B1EEAD2DB00ECA47F /* CameraView.swift in Sources */,
