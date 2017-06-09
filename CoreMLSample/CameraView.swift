@@ -13,13 +13,15 @@ final class CameraView: UIView {
 
     weak var delegate: CameraViewDelegate?
 
-    let model = GoogLeNetPlaces()
+    let model = Resnet50()
     let captureSession: AVCaptureSession
 
     private let nameLabel: UILabel = {
         let label = UILabel()
         label.font = UIFont.boldSystemFont(ofSize: 36)
         label.textColor = .white
+        label.numberOfLines = 3
+        label.textAlignment = .center
         return label
     }()
 
@@ -79,6 +81,8 @@ final class CameraView: UIView {
         NSLayoutConstraint.activate([
             nameLabel.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -48),
             nameLabel.centerXAnchor.constraint(equalTo: centerXAnchor),
+            nameLabel.leadingAnchor.constraint(equalTo: leadingAnchor),
+            nameLabel.trailingAnchor.constraint(equalTo: trailingAnchor),
             confidenceLabel.topAnchor.constraint(equalTo: nameLabel.bottomAnchor, constant: 6),
             confidenceLabel.centerXAnchor.constraint(equalTo: centerXAnchor)
         ])
@@ -113,11 +117,11 @@ extension CameraView: AVCaptureVideoDataOutputSampleBufferDelegate {
         guard let pixelBuffer = imageBuffer.toImage().resize(to: CGSize(width: 224, height: 224)).pixelBuffer() else {
             fatalError()
         }
-        guard let prediction = try? model.prediction(sceneImage: pixelBuffer) else {
+        guard let prediction = try? model.prediction(image: pixelBuffer) else {
             return
         }
-        let label = prediction.sceneLabel
-        delegate?.cameraViewDidPredictScene(label: label, confidence: prediction.sceneLabelProbs[label])
+        let label = prediction.classLabel
+        delegate?.cameraViewDidPredictScene(label: label, confidence: prediction.classLabelProbs[label])
     }
 }
 

@@ -11,11 +11,11 @@
 		FD267F931EEA122A009AEB2C /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD267F921EEA122A009AEB2C /* CameraViewController.swift */; };
 		FD267F981EEA122A009AEB2C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FD267F971EEA122A009AEB2C /* Assets.xcassets */; };
 		FD267F9B1EEA122A009AEB2C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FD267F991EEA122A009AEB2C /* LaunchScreen.storyboard */; };
-		FD267FA31EEA1236009AEB2C /* GoogLeNetPlaces.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = FD267FA21EEA1236009AEB2C /* GoogLeNetPlaces.mlmodel */; };
 		FD267FA51EEA2FE4009AEB2C /* UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD267FA41EEA2FE4009AEB2C /* UIImage.swift */; };
 		FDC6FF6B1EEAD2DB00ECA47F /* CameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC6FF6A1EEAD2DB00ECA47F /* CameraView.swift */; };
 		FDC6FF6D1EEAD3C200ECA47F /* SmartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC6FF6C1EEAD3C200ECA47F /* SmartViewController.swift */; };
 		FDC6FF6F1EEAD73E00ECA47F /* CVImageBuffer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC6FF6E1EEAD73E00ECA47F /* CVImageBuffer.swift */; };
+		FDC6FF741EEAE29200ECA47F /* Resnet50.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = FDC6FF731EEAE29200ECA47F /* Resnet50.mlmodel */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,12 +25,12 @@
 		FD267F971EEA122A009AEB2C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FD267F9A1EEA122A009AEB2C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FD267F9C1EEA122A009AEB2C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		FD267FA21EEA1236009AEB2C /* GoogLeNetPlaces.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; name = GoogLeNetPlaces.mlmodel; path = ../../../../Downloads/GoogLeNetPlaces.mlmodel; sourceTree = "<group>"; };
 		FD267FA41EEA2FE4009AEB2C /* UIImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImage.swift; sourceTree = "<group>"; };
 		FD267FA61EEA30C4009AEB2C /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
 		FDC6FF6A1EEAD2DB00ECA47F /* CameraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraView.swift; sourceTree = "<group>"; };
 		FDC6FF6C1EEAD3C200ECA47F /* SmartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmartViewController.swift; sourceTree = "<group>"; };
 		FDC6FF6E1EEAD73E00ECA47F /* CVImageBuffer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CVImageBuffer.swift; sourceTree = "<group>"; };
+		FDC6FF731EEAE29200ECA47F /* Resnet50.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; name = Resnet50.mlmodel; path = ../../../../Downloads/Resnet50.mlmodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,7 +64,7 @@
 		FD267F8F1EEA122A009AEB2C /* CoreMLSample */ = {
 			isa = PBXGroup;
 			children = (
-				FD267FA21EEA1236009AEB2C /* GoogLeNetPlaces.mlmodel */,
+				FDC6FF731EEAE29200ECA47F /* Resnet50.mlmodel */,
 				FD267F901EEA122A009AEB2C /* AppDelegate.swift */,
 				FD267F921EEA122A009AEB2C /* CameraViewController.swift */,
 				FDC6FF6A1EEAD2DB00ECA47F /* CameraView.swift */,
@@ -156,13 +156,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FDC6FF741EEAE29200ECA47F /* Resnet50.mlmodel in Sources */,
 				FDC6FF6F1EEAD73E00ECA47F /* CVImageBuffer.swift in Sources */,
 				FD267F931EEA122A009AEB2C /* CameraViewController.swift in Sources */,
 				FD267FA51EEA2FE4009AEB2C /* UIImage.swift in Sources */,
 				FD267F911EEA122A009AEB2C /* AppDelegate.swift in Sources */,
 				FDC6FF6B1EEAD2DB00ECA47F /* CameraView.swift in Sources */,
 				FDC6FF6D1EEAD3C200ECA47F /* SmartViewController.swift in Sources */,
-				FD267FA31EEA1236009AEB2C /* GoogLeNetPlaces.mlmodel in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
