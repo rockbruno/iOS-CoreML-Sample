@@ -1,3 +1,9 @@
 # CoreML Sample
 
-Sample camera app that uses CoreML to classify what the camera is seeing, like the demo app at WWDC 2017. WIP!
+A reproduction of the Demo CoreML Camera app from WWDC 2017 for learning purposes.
+
+<img src="https://i.imgur.com/FTzx2xF.jpg" alt="Movile, Campinas - SP - Brazil">
+
+## Model
+
+The embedded model comes from [Apple's Machine Learning samples](https://developer.apple.com/machine-learning/). For meaningful results, you should try using a bigger model.
